@@ -1,0 +1,17 @@
+<div class="container" ng-controller="employeeUpdateController as empCtrl">
+  <div class="row">
+      <form class="form-sign" method="post" ng-submit="empCtrl.editEmployee(empCtrl.empData.id)">
+
+        ID:         <input type="text" name="id" class="form-control" ng-model="empCtrl.empData.id">
+        First Name: <input type="text" name="fname" class="form-control" ng-model="empCtrl.empData.name.first">
+        Last Name:  <input type="text" name="lname" class="form-control" ng-model="empCtrl.empData.name.last">
+        Salary:     <input type="text" name="salary" class="form-control" ng-model="empCtrl.empData.salary.base">
+        Department: <input type="text" name="department" class="form-control" ng-model="empCtrl.empData.department">
+        Manager:    <input type="text" name="manager" class="form-control" ng-model="empCtrl.empData.manager">
+
+        <button type="submit" class="btn btn-success">Update</button>
+
+      </form>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <th>Employee Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Department</th>
+        <th>Manager</th>
+        <th>Salary</th>
+        <th>Deductions</th>
+        <th>Take home</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name.first}}</td>
+            <td>{{employee.name.last}}</td>
+            <td>{{employee.department}}</td>
+            <td>{{employee.manager}}</td>
+            <td>{{employee.salary.base}}</td>
+            <td>{{employee.salary.deductions}}</td>
+            <td>{{employee.salary.take_home}}</td>
+            <td><a class="btn" ng-click="deleteEmployee(employee.id)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
